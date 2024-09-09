@@ -27,8 +27,6 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required',
             'password' => 'required',
-            'phone' => 'required',
-            'address' => 'required|string|max:255',
         ]);
 
         if ($validatorData->passes()) {
@@ -36,8 +34,6 @@ class UserController extends Controller
                 'name' => $request->name,
                 'email' => $request->email,
                 'password' => Hash::make($request->password),
-                'phone' => $request->phone,
-                'address' => $request->address,
             ]);
 
             return response()->json(['success' => true, 'message' => 'Record stored successfully.']);
@@ -57,16 +53,12 @@ class UserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|email|max:255',
             'password' => 'required|string|min:8',
-            'phone' => 'required|string|max:20',
-            'address' => 'required|string|max:255',
         ]);
         $user = User::find($id);
         $user->update([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'phone' => $request->phone,
-            'address' => $request->address,
         ]);
 
         return response()->json([

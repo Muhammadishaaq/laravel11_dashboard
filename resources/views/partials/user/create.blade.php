@@ -46,22 +46,6 @@
                                     placeholder="Password" autocomplete="new-password">
                             </div>
                         </div>
-                        <!-- Phone -->
-                        <div class="col-md-6">
-                            <div class="mb-3">
-                                <label for="phone">Phone</label>
-                                <input type="text" name="phone" id="phone" class="form-control" placeholder="Phone"
-                                    autocomplete="new-phone">
-                            </div>
-                        </div>
-                        <!-- Address -->
-                        <div class="col-md-12">
-                            <div class="mb-3">
-                                <label for="address">Address</label>
-                                <textarea name="address" id="address" class="form-control" cols="30" rows="1"
-                                    autocomplete="new-address"></textarea>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>

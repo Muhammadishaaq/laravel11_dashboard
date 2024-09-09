@@ -25,8 +25,6 @@
                             <th width="60">ID</th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Phone</th>
-                            <th>Address</th>
                             <th width="100">Action</th>
                         </tr>
                     </thead>
@@ -36,8 +34,6 @@
                                 <td>{{$loop->iteration}}</td>
                                 <td>{{$item->name}}</td>
                                 <td>{{$item->email}}</td>
-                                <td>{{$item->phone}}</td>
-                                <td>{{$item->address}}</td>
                                 <td>
                                     <a href="{{route('users.edit', $item->id)}}">
                                         <svg class="filament-link-icon w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg"
