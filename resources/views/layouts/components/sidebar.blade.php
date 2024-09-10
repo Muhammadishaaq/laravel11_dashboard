@@ -24,6 +24,13 @@
                         <p>Users</p>
                     </a>
                 </li> 
+
+                <li class="nav-item">
+                    <a href="{{route('plans.index')}}" class="nav-link">
+                        <i class="nav-icon  fas fa-users"></i>
+                        <p>Plans</p>
+                    </a>
+                </li> 
             </ul>
         </nav>
         <!-- /.sidebar-menu -->

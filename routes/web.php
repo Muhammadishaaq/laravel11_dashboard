@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\{
     DashboardController,
-    UserController
+    UserController,
+    PlanController
 };
 
 Route::get('/', [LoginController::class, 'LoginForm'])->name('loginPage');
@@ -20,4 +21,7 @@ Route::middleware(['auth:admin', 'admin'])->group(function () {
     Route::post('/logout', [LoginController::class, 'logout'])->name('admin.logout');
     /*Users CRUD Route*/
     Route::resource('/users', UserController::class);
+
+     /*Users CRUD Route*/
+     Route::resource('/plans', PlanController::class);
 });
