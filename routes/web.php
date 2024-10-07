@@ -5,7 +5,6 @@ use App\Http\Controllers\Admin\Auth\LoginController;
 use App\Http\Controllers\Admin\{
     DashboardController,
     UserController,
-    PlanController
 };
 
 Route::get('/', [LoginController::class, 'LoginForm'])->name('loginPage');
@@ -22,6 +21,5 @@ Route::middleware(['auth:admin', 'admin'])->group(function () {
     /*Users CRUD Route*/
     Route::resource('/users', UserController::class);
 
-     /*Users CRUD Route*/
-     Route::resource('/plans', PlanController::class);
+    
 });
